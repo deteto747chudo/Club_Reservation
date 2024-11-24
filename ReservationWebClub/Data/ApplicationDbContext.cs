@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ReservationWebClub.Models;
 
 namespace ReservationWebClub.Data
 {
@@ -9,5 +10,6 @@ namespace ReservationWebClub.Data
             : base(options)
         {
         }
+        public DbSet<ReservationWebClub.Models.Products> Products { get; set; } = default!;
     }
 }
